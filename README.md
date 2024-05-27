@@ -13,7 +13,9 @@ git clone --branch develop https://github.com/papesambandour/thycotic | cd && ch
 
 ### Configuration
 
-Pour configurer les access thycotic on peut utiliser la commande thycotic login
+Pour configurer les access thycotic on peut utiliser la commande thycotic login.
+
+Il va vous demander vos accès thycotic que vous utiliser au niveau de l'interface web.
 
 #### Syntax
 ```
