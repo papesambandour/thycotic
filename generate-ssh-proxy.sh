@@ -14,7 +14,7 @@ validate_input() {
     fi
 }
 # Check if the file exists
-if [ ! -f "$FILE" ] || [ "$1" = "configure" ]; then
+if [ ! -f "$FILE" ] || [ "$1" = "login" ]; then
 #    echo -e "${YELLOW}Le fichier $FILE n'existe pas. Merci de saisir vos accès thycotic."
     echo -e "${GREEN}Configuration des accès Thycotic${YELLOW}"
     # Prompt the user for values

@@ -16,11 +16,11 @@ git clone --branch develop https://github.com/papesambandour/thycotic | cd && ch
 
 ### Configuration
 
-Pour configurer les access thycotic on peut utiliser la commande thycotic configure
+Pour configurer les access thycotic on peut utiliser la commande thycotic login
 
 #### Syntax
 ```
-thycotic configure
+thycotic login
 ```
 
 ### Connexion ssh vers un server
