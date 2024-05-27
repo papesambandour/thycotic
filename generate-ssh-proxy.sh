@@ -86,9 +86,6 @@ is_valid_ip() {
      false
   fi
 }
-#is_valid_ip "10"
-#echo "ooo";
-#exit 1
 
 # Function to check if a string is a valid domain name
 is_valid_domain() {
@@ -122,7 +119,7 @@ if ! (is_valid_ip "$2" || is_valid_domain "$2"); then
 fi
 # Configuration
 API_URL="https://${thycotic_sub_domaine}.secretservercloud.eu/oauth2/token"
-SECRET_SERVER_URL="https://freesn.secretservercloud.eu/api/v1/secrets/sshproxy"
+SECRET_SERVER_URL="https://${thycotic_sub_domaine}.secretservercloud.eu/api/v1/secrets/sshproxy"
 unset SECRET_ID
 unset TARGET_SERVER_IP
 SECRET_ID="$1"
