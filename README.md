@@ -1,4 +1,4 @@
-# Thyconic 
+# THYCOTIC CLI 
 
 ## Configuration requis
 thycotic_username: le nom d'utilisateur thycotic
