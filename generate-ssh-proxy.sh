@@ -168,23 +168,28 @@ if [ -z "$PASSWORD_PROXY" ] || [ "${PASSWORD_PROXY}" = "null" ]; then
 fi
 
 echo -e "${GREEN}Proxy access granted ${NC}"
-echo -e "${YELLOW}\n============================PROXY ACCESS===========================\n"
+echo -e "${YELLOW}\n============================PROXY ACCESS START SESSION===========================\n"
 if [ "${3}" = "show" ] ; then
+  echo -e "${GREEN}USERNAME: $USERNAME_PROXY"
   echo -e "${GREEN}PASSWORD: $PASSWORD_PROXY"
-  echo -e "${YELLOW}ssh $USERNAME_PROXY@$HOST_PROXY"
+  echo -e "${GREEN}HOST: $HOST_PROXY"
+  echo -e "${GREEN}COMMAND: ssh $USERNAME_PROXY@$HOST_PROXY"
  elif  [ "${3}" = "l_copy" ] ; then
-   echo -e "${GREEN}Password: $PASSWORD_PROXY ${NC}"
-   echo -e "${GREEN}scp -r $4 $USERNAME_PROXY@$HOST_PROXY:$5 ${NC}"
+     echo -e "${GREEN}USERNAME: $USERNAME_PROXY"
+     echo -e "${GREEN}PASSWORD: $PASSWORD_PROXY"
+     echo -e "${GREEN}HOST: $HOST_PROXY"
+   echo -e "${GREEN}COMMAND: scp -r $4 $USERNAME_PROXY@$HOST_PROXY:$5 ${NC}"
  elif  [ "${3}" = "r_copy" ] ; then
-   echo -e "${GREEN}Password: $PASSWORD_PROXY ${NC}"
-   echo -e "${GREEN}scp -r $USERNAME_PROXY@$HOST_PROXY:$5 $4  ${NC}"
+     echo -e "${GREEN}USERNAME: $USERNAME_PROXY"
+     echo -e "${GREEN}PASSWORD: $PASSWORD_PROXY"
+     echo -e "${GREEN}HOST: $HOST_PROXY"
+   echo -e "${GREEN}COMMAND: scp -r $USERNAME_PROXY@$HOST_PROXY:$5 $4  ${NC}"
  elif  [ "${3}" = "connect" ] ; then
    echo -e "${GREEN}SSH login running ...${NC}"
    sshpass -p "$PASSWORD_PROXY" ssh "$USERNAME_PROXY@$HOST_PROXY"
  else
    echo -e "${YELLOW}Unsupported arg : $3 ${NC}"
-   exit
 fi
 
-echo -e "${YELLOW}\n============================PROXY ACCESS===========================\n"
+echo -e "${YELLOW}\n============================PROXY ACCESS END SESSION=============================\n"
 exit
