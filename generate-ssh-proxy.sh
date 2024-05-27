@@ -5,7 +5,6 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
-echo "__DIR__$SCRIPT_DIR"
 #config
 FILE="$SCRIPT_DIR/thycotic.config"
 validate_input() {
@@ -15,9 +14,9 @@ validate_input() {
     fi
 }
 # Check if the file exists
-if [ ! -f "$FILE" ]; then
-    echo -e "${YELLOW}Le fichier $FILE n'existe pas. Merci de saisir vos accès thycotic."
-
+if [ ! -f "$FILE" ] || [ "$1" = "configure" ]; then
+#    echo -e "${YELLOW}Le fichier $FILE n'existe pas. Merci de saisir vos accès thycotic."
+    echo -e "${GREEN}Configuration des accès Thycotic${YELLOW}"
     # Prompt the user for values
     read -rp "Entrer thycotic_username: " thycotic_username
     read -srp "Entrer thycotic_password: " thycotic_password
@@ -29,7 +28,9 @@ if [ ! -f "$FILE" ]; then
     echo "thycotic_password=$thycotic_password" >> "$FILE"
     echo "thycotic_sub_domaine=$thycotic_sub_domaine" >> "$FILE"
 
-    echo -e "${GREEN}Fichier $FILE est crée avec vos accès thycotic.${NC}"
+    echo -e "${GREEN}La configuration est enregistrer dans le fichier $FILE.${NC}"
+    echo -e "${GREEN}Vous pouvez á présent commencer à utiliser thycotic cli ${NC}"
+    exit 0
 fi
 
 # Read values from the file
@@ -191,11 +192,10 @@ fi
 #docker stack deploy -c deploiement-swarm.yml  --with-registry-auth aip
 #docker stack deploy -c kafka.yml  --with-registry-auth aip
 echo -e "${GREEN}Proxy access granted ${NC}"
-
+echo -e "${YELLOW}\n============================PROXY ACCESS===========================\n"
 if [ "${3}" = "show" ] ; then
   echo -e "${GREEN}PASSWORD: $PASSWORD_PROXY"
   echo -e "${YELLOW}ssh $USERNAME_PROXY@$HOST_PROXY"
-  exit
  elif  [ "${3}" = "l_copy" ] ; then
    echo -e "${GREEN}Password: $PASSWORD_PROXY ${NC}"
    echo -e "${GREEN}scp -r $4 $USERNAME_PROXY@$HOST_PROXY:$5 ${NC}"
@@ -210,3 +210,5 @@ if [ "${3}" = "show" ] ; then
    exit
 fi
 
+echo -e "${YELLOW}\n============================PROXY ACCESS===========================\n"
+exit
