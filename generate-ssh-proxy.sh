@@ -186,8 +186,7 @@ if [ -z "$PASSWORD_PROXY" ] || [ "${PASSWORD_PROXY}" = "null" ]; then
   echo -e "${YELLOW}Failed to obtain PASSWORD PROXY ${NC}"
   exit 1
 fi
-#docker stack deploy -c deploiement-swarm.yml  --with-registry-auth aip
-#docker stack deploy -c kafka.yml  --with-registry-auth aip
+
 echo -e "${GREEN}Proxy access granted ${NC}"
 echo -e "${YELLOW}\n============================PROXY ACCESS===========================\n"
 if [ "${3}" = "show" ] ; then
