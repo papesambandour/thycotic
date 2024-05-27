@@ -1,11 +1,6 @@
 # THYCOTIC CLI 
 
-## Configuration requis
-thycotic_username: le nom d'utilisateur thycotic
-
-thycotic_password: le mot de passe  thycotic
-
-thycotic_sub_domaine: le sous domaine de l'entreprise (exemple : freesn)
+Thycotic CLI permet d'avoir une utilisation beaucoup plus fluide de l'utilisation du terminal à travers le Jump Server
 
 ## Installation
 
