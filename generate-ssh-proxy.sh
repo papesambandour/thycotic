@@ -187,7 +187,6 @@ if [ "${3}" = "show" ] ; then
  elif  [ "${3}" = "connect" ] ; then
    echo -e "${GREEN}SSH login running ...${NC}"
    clear
-   echo -e "${YELLOW}\n============================PROXY ACCESS START SESSION===========================\n${NC}"
    sshpass -p "$PASSWORD_PROXY" ssh "$USERNAME_PROXY@$HOST_PROXY"
  else
    echo -e "${YELLOW}Unsupported arg : $3 ${NC}"
