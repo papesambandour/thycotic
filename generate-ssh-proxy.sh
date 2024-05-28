@@ -194,5 +194,4 @@ fi
 
 echo -e "${YELLOW}\n============================PROXY ACCESS END SESSION=============================\n${NC}"
 sleep 2
-clear
 exit
