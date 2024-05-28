@@ -168,7 +168,7 @@ if [ -z "$PASSWORD_PROXY" ] || [ "${PASSWORD_PROXY}" = "null" ]; then
 fi
 
 echo -e "${GREEN}Proxy access granted ${NC}"
-echo -e "${YELLOW}\n============================PROXY ACCESS START SESSION===========================\n"
+echo -e "${YELLOW}\n============================PROXY ACCESS START SESSION===========================\n${NC}"
 if [ "${3}" = "show" ] ; then
   echo -e "${GREEN}USERNAME: $USERNAME_PROXY"
   echo -e "${GREEN}PASSWORD: $PASSWORD_PROXY"
@@ -186,10 +186,14 @@ if [ "${3}" = "show" ] ; then
    echo -e "${GREEN}COMMAND: scp -r $USERNAME_PROXY@$HOST_PROXY:$5 $4  ${NC}"
  elif  [ "${3}" = "connect" ] ; then
    echo -e "${GREEN}SSH login running ...${NC}"
+   clear
+   echo -e "${YELLOW}\n============================PROXY ACCESS START SESSION===========================\n${NC}"
    sshpass -p "$PASSWORD_PROXY" ssh "$USERNAME_PROXY@$HOST_PROXY"
  else
    echo -e "${YELLOW}Unsupported arg : $3 ${NC}"
 fi
 
-echo -e "${YELLOW}\n============================PROXY ACCESS END SESSION=============================\n"
+echo -e "${YELLOW}\n============================PROXY ACCESS END SESSION=============================\n${NC}"
+sleep 2
+clear
 exit
