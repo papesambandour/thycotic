@@ -192,6 +192,5 @@ if [ "${3}" = "show" ] ; then
    echo -e "${YELLOW}Unsupported arg : $3 ${NC}"
 fi
 
-echo -e "${YELLOW}\n============================PROXY ACCESS END SESSION=============================\n${NC}"
-sleep 2
+echo -e "${YELLOW}\n============================PROXY ACCESS END SESSION=============================${NC}"
 exit
