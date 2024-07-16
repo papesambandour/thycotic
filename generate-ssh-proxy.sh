@@ -192,7 +192,7 @@ if [ "${3}" = "show" ] ; then
    echo -e "${GREEN}SSH login running ...${NC}"
    clear
 #   sshpass -p "$PASSWORD_PROXY" ssh "$USERNAME_PROXY@$HOST_PROXY"
-   sshpass -p "$PASSWORD_PROXY" ssh "$USERNAME_PROXY@$HOST_PROXY" -t "sudo -s"
+   sshpass -p "$PASSWORD_PROXY" ssh "$USERNAME_PROXY@$HOST_PROXY"
  else
    echo -e "${YELLOW}Unsupported arg : $3 ${NC}"
 fi

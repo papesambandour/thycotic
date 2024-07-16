@@ -5,8 +5,7 @@ Thycotic CLI permet d'avoir une utilisation beaucoup plus fluide de l'utilisatio
 ## Installation
 
 ``` 
-git clone --branch develop https://github.com/papesambandour/thycotic | cd && chmod +x run.sh && ./run.sh
-
+git clone --branch develop https://github.com/papesambandour/thycotic thycotic && cd thycotic && chmod +x run.sh && ./run.sh
 ```
 
 ## Utilisation
