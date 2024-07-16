@@ -20,7 +20,7 @@ Il va vous demander vos accès thycotic que vous utiliser au niveau de l'interfa
 ```
 thycotic login
 
-Exemple de donné
+Exemple de donnée
 thycotic_username: pape.ndour
 thycotic_password:*******
 thycotic_sub_domaine:freesn(pour les utilisateur de Free Senegal)
