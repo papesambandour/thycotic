@@ -20,10 +20,10 @@ Il va vous demander vos accès thycotic que vous utiliser au niveau de l'interfa
 ```
 thycotic login
 
-OUTPUT
+Exemple de donné
 thycotic_username: pape.ndour
 thycotic_password:*******
-thycotic_sub_domaine:freesn
+thycotic_sub_domaine:freesn(pour les utilisateur de Free Senegal)
 ```
 
 ### Connexion ssh vers un server
