@@ -19,6 +19,11 @@ Il va vous demander vos accès thycotic que vous utiliser au niveau de l'interfa
 #### Syntax
 ```
 thycotic login
+
+OUTPUT
+thycotic_username: pape.ndour
+thycotic_password:*******
+thycotic_sub_domaine:freesn
 ```
 
 ### Connexion ssh vers un server
