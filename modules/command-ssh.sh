@@ -6,7 +6,7 @@ if [ "${2}" = "show" ] ; then
   echo -e "${GREEN}PASSWORD: $PASSWORD_PROXY"
   echo -e "${GREEN}HOST: $HOST_PROXY"
   echo -e "${GREEN}COMMAND: ssh $USERNAME_PROXY@$HOST_PROXY"
- elif  [ "${3}" = "l_copy" ] ; then
+ elif  [ "${2}" = "l_copy" ] ; then
    clear
   echo -e "${GREEN}Local copy Starting ... ${NC}"
   sshpass -p "$PASSWORD_PROXY" scp -r -o StrictHostKeyChecking=no "$3" "$USERNAME_PROXY"@"$HOST_PROXY":"$4"
